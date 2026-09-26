@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>squad-harness</title>
+<meta name="description" content="Preprint: governança de verificação em sistemas de agentes LLM. EN + PT.">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/aaaakshat/cm-web-fonts@latest/fonts.css">
+<style>
+  :root{
+    color-scheme:light;
+    --bg:#ffffff; --ink:#111111; --muted:#3d3d3d; --faint:#666666;
+    --rule:#111111; --hair:#e3e3e3; --link:#1a4f9c; --code-bg:#f6f6f4; --code-bd:#e0e0dc;
+    --serif:"Computer Modern Serif","Latin Modern Roman",Georgia,"Times New Roman",Times,serif;
+    --mono:"Computer Modern Typewriter",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    --measure:min(64rem, 92vw);
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--serif);
+    font-size:18px;line-height:1.5}
+
+  .bar{display:flex;align-items:center;justify-content:space-between;gap:.75rem;
+    padding:.5rem 1rem;background:#fff;border-bottom:1px solid var(--hair)}
+  .left{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap}
+  .brand{font-family:var(--mono);font-size:.8rem;color:var(--faint)}
+  .doi{display:inline-flex;line-height:0}
+  .doi img{height:18px;display:block}
+  .seg{display:inline-flex;gap:.15rem;align-items:baseline}
+  .seg button{font-family:var(--serif);font-size:.9rem;border:0;background:transparent;
+    color:var(--faint);padding:.1rem .35rem;cursor:pointer}
+  .seg button[aria-pressed="true"]{color:var(--ink);font-weight:700;text-decoration:underline;
+    text-underline-offset:3px}
+
+  main{max-width:var(--measure);margin:0 auto;padding:2.2rem 1.4rem 6rem}
+
+  /* masthead */
+  article h1{font-weight:700;font-size:2.1rem;line-height:1.15;letter-spacing:-.01em;
+    margin:0 0 .7rem;text-align:left}
+  article h1 + p{font-size:1rem;color:var(--ink);margin:0 0 1rem;text-indent:0;line-height:1.45}
+  article h1 + p strong{font-size:1.08rem}
+
+  /* sections, LaTeX-ish */
+  article h2{font-weight:700;font-size:1rem;text-transform:uppercase;letter-spacing:.03em;
+    margin:1.9rem 0 .5rem}
+  article h3{font-weight:700;font-size:1.02rem;margin:1.4rem 0 .4rem}
+
+  article p{margin:0 0 .8rem;text-align:justify;hyphens:auto;-webkit-hyphens:auto;text-indent:1.5em}
+  article h1 + p,article h2 + p,article h3 + p,article blockquote + p,
+  article hr + p,article ul + p,article ol + p,article pre + p{text-indent:0}
+
+  article a{color:var(--link);text-decoration:none}
+  article a:hover{text-decoration:underline}
+  article strong{font-weight:700}
+  article em{font-style:italic}
+
+  article ul,article ol{margin:0 0 .9rem;padding-left:1.5rem}
+  article li{margin:.2rem 0;text-align:justify}
+
+  article blockquote{margin:1rem 1.8em;color:var(--muted);font-style:italic}
+  article blockquote p{text-indent:0;text-align:left}
+  article blockquote p:last-child{margin-bottom:0}
+
+  article code{font-family:var(--mono);font-size:.86em;background:var(--code-bg);
+    padding:.08em .34em;border-radius:.2em}
+  article pre{background:var(--code-bg);border:1px solid var(--code-bd);border-radius:.3rem;
+    padding:.85rem 1rem;overflow-x:auto;margin:1.1rem 0}
+  article pre code{background:transparent;padding:0;font-size:.82rem;line-height:1.5;white-space:pre}
+
+  article hr{border:0;border-top:1px solid var(--rule);margin:1.5rem 0}
+
+  article img{display:block;margin:1.3rem auto;width:100%;height:auto}
+  /* figure captions: centered, small (LaTeX) */
+  article p:has(> em:only-child){text-align:center;text-indent:0;font-size:.9rem;color:var(--faint);margin-top:-.4rem}
+
+  .loading{color:var(--faint);text-indent:0}
+  .err{color:#8a1f1f;text-indent:0}
+
+  @media (max-width:560px){
+    body{font-size:17px}
+    article h1{font-size:1.7rem}
+    main{padding:1.6rem 1.1rem 5rem}
+    .brand{display:none}
+  }
+</style>
+</head>
+<body>
+<div class="bar">
+  <div class="left">
+    <span class="brand">squad-harness</span>
+    <a class="doi" href="https://orcid.org/0009-0006-7522-326X" target="_blank" rel="noopener" title="ORCID"><img src="https://img.shields.io/badge/ORCID-A6CE39?logo=orcid&logoColor=white" alt="ORCID 0009-0006-7522-326X"></a>
+    <a class="doi" href="https://doi.org/10.5281/zenodo.22481935" target="_blank" rel="noopener" title="DOI no Zenodo"><img src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.22481935-1682D4" alt="DOI 10.5281/zenodo.22481935"></a>
+  </div>
+  <div class="seg" role="group" aria-label="Idioma">
+    <button id="lang-pt" aria-pressed="true">PT</button>
+    <button id="lang-en" aria-pressed="false">EN</button>
+  </div>
+</div>
+<main><article id="content"><p class="loading">Carregando...</p></article></main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+<script>
+(function(){
+  var content=document.getElementById('content');
+  var FILE={pt:'paper.md',en:'paper.en.md'};
+  var cache={};
+  function g(k,d){try{var v=localStorage.getItem(k);return v==null?d:v;}catch(e){return d;}}
+  function s(k,v){try{localStorage.setItem(k,v);}catch(e){}}
+  function show(lang){
+    document.getElementById('lang-pt').setAttribute('aria-pressed',String(lang==='pt'));
+    document.getElementById('lang-en').setAttribute('aria-pressed',String(lang==='en'));
+    try{document.documentElement.lang = lang==='pt'?'pt-BR':'en';}catch(e){}
+    if(cache[lang]){content.innerHTML=cache[lang];window.scrollTo(0,0);return;}
+    content.innerHTML='<p class="loading">'+(lang==='pt'?'Carregando...':'Loading...')+'</p>';
+    fetch(FILE[lang],{cache:'no-store'}).then(function(r){
+      if(!r.ok) throw new Error(r.status); return r.text();
+    }).then(function(md){
+      var html = window.marked ? marked.parse(md,{breaks:true}) : md;
+      cache[lang]=html; content.innerHTML=html; window.scrollTo(0,0);
+    }).catch(function(e){
+      content.innerHTML='<p class="err">Nao consegui carregar o texto ('+e.message+'). '+
+        'Abra direto: <a href="'+FILE[lang]+'">'+FILE[lang]+'</a></p>';
+    });
+  }
+  function setLang(l){s('vfa-lang',l);show(l);}
+  document.getElementById('lang-pt').addEventListener('click',function(){setLang('pt');});
+  document.getElementById('lang-en').addEventListener('click',function(){setLang('en');});
+  show(g('vfa-lang','pt'));
+})();
+</script>
+</body>
+</html>

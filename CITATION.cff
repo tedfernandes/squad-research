@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+title: "Governança de Verificação em Sistemas de Agentes LLM: tratando a saída do agente com o ceticismo da integração contínua"
+message: "If you use or reference this work, please cite it as below."
+type: article
+authors:
+  - family-names: Fernandes
+    given-names: Ted
+    email: tedfernandes@gmail.com
+    orcid: "https://orcid.org/0009-0006-7522-326X"
+abstract: >-
+  Multi-agent LLM frameworks have converged on a company-of-agents organization, but
+  under-address how such systems verify their own output and avoid reporting success when
+  nothing was checked. This experience report describes a production agent system whose
+  distinguishing contribution is a verification substrate: an explicit indeterminate outcome
+  state, an LLM-free defect-ledger ratchet of provenance-linked invariants that prefer executing
+  artifacts over string-matching them, a loop that compiles each confirmed defect into an
+  enforced check, property-based prompt-change regression gates, and untrusted-by-default handling
+  of agent-authored context.
+keywords:
+  - LLM agents
+  - multi-agent systems
+  - software engineering
+  - verification
+  - evaluation
+  - agent governance
+  - experience report
+version: "1.3"
+date-released: "2026-09-24"
+license: CC-BY-4.0
+repository-code: "https://github.com/tedfernandes/squad-research"
+url: "https://tedfernandes.github.io/squad-research/"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.22481935"
+    description: "Concept DOI (todas as versões; resolve sempre para a mais recente)"

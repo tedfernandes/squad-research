@@ -1,0 +1,9 @@
+# Nothing sensitive should ever live here, but be defensive:
+.env
+.env.*
+*.key
+*.pem
+.DS_Store
+Thumbs.db
+node_modules/
+__pycache__/

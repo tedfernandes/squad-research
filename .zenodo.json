@@ -1,0 +1,26 @@
+{
+  "title": "Governança de Verificação em Sistemas de Agentes LLM: tratando a saída do agente com o ceticismo da integração contínua",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "language": "por",
+  "creators": [
+    {
+      "name": "Fernandes, Ted",
+      "orcid": "0009-0006-7522-326X"
+    }
+  ],
+  "keywords": [
+    "LLM agents",
+    "multi-agent systems",
+    "software engineering",
+    "verification",
+    "evaluation",
+    "agent governance",
+    "experience report"
+  ],
+  "description": "Preprint e relato de experiência sobre governança de verificação em sistemas de agentes LLM. A contribuição é o substrato de verificação (um terceiro estado 'indeterminado' em que ausência de medição nunca é aprovação; uma catraca de defeitos sem LLM, com invariantes rastreáveis a defeitos reais, que prefere executar o artefato a casar o texto; um loop que compila cada defeito confirmado em invariante mecânica ou caso de avaliação; um gate de regressão por propriedade para mudança de prompt; e contexto escrito por agente tratado como não-confiável), e não a organização de 'empresa de agentes', que é convencional. Versões em português (principal) e inglês. Implantação de um único operador, com avaliação ancorada em dados reais do repositório. Sistema chamado squad-harness.",
+  "version": "1.3",
+  "publication_date": "2026-09-24"
+}

@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 528" width="700" height="528" role="img" aria-label="Verification substrate key numbers for squad-harness">
+  <title>squad-harness: verification substrate key numbers</title>
+  <style>
+    text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+    .h{font-size:18px;font-weight:700;fill:#e6edf3}
+    .sub{font-size:12px;fill:#8b949e}
+    .pt{font-size:13px;font-weight:600;fill:#e6edf3}
+    .lg{font-size:12px;fill:#8b949e}
+    .num{font-size:12px;font-weight:700;fill:#ffffff}
+    .numg{font-size:12px;font-weight:700;fill:#3fb950}
+  </style>
+  <rect x="2" y="2" width="696" height="524" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+  <text x="28" y="40" class="h">Verification substrate: key numbers</text>
+  <text x="28" y="60" class="sub">squad-harness · real figures at the measured commit, nothing fabricated</text>
+  <line x1="28" y1="76" x2="672" y2="76" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Panel A: third state -->
+  <text x="28" y="100" class="pt">Third state · assessed projects</text>
+  <rect x="28" y="112" width="22" height="22" rx="5" fill="#39d353"/>
+  <rect x="56" y="112" width="22" height="22" rx="5" fill="#39d353"/>
+  <rect x="84" y="112" width="22" height="22" rx="5" fill="#39d353"/>
+  <rect x="112" y="112" width="22" height="22" rx="5" fill="#39d353"/>
+  <rect x="140" y="112" width="22" height="22" rx="5" fill="#39d353"/>
+  <rect x="168" y="112" width="22" height="22" rx="5" fill="#39d353"/>
+  <rect x="196" y="112" width="22" height="22" rx="5" fill="#39d353"/>
+  <rect x="28" y="140" width="22" height="22" rx="5" fill="#39d353"/>
+  <rect x="56" y="140" width="22" height="22" rx="5" fill="#39d353"/>
+  <rect x="84" y="140" width="22" height="22" rx="5" fill="#39d353"/>
+  <rect x="112" y="140" width="22" height="22" rx="5" fill="#39d353"/>
+  <rect x="140" y="140" width="22" height="22" rx="5" fill="#161b22" stroke="#30363d"/>
+  <rect x="168" y="140" width="22" height="22" rx="5" fill="#161b22" stroke="#30363d"/>
+  <rect x="196" y="140" width="22" height="22" rx="5" fill="#161b22" stroke="#30363d"/>
+  <rect x="28" y="168" width="22" height="22" rx="5" fill="#161b22" stroke="#30363d"/>
+  <rect x="56" y="168" width="22" height="22" rx="5" fill="#161b22" stroke="#30363d"/>
+  <rect x="84" y="168" width="22" height="22" rx="5" fill="#161b22" stroke="#30363d"/>
+  <rect x="112" y="168" width="22" height="22" rx="5" fill="#161b22" stroke="#30363d"/>
+  <rect x="140" y="168" width="22" height="22" rx="5" fill="#161b22" stroke="#30363d"/>
+  <rect x="168" y="168" width="22" height="22" rx="5" fill="#161b22" stroke="#30363d"/>
+  <rect x="196" y="168" width="22" height="22" rx="5" fill="#161b22" stroke="#30363d"/>
+  <rect x="252" y="118" width="14" height="14" rx="4" fill="#39d353"/>
+  <text x="272" y="130" class="lg">has a test suite · 11</text>
+  <rect x="252" y="142" width="14" height="14" rx="4" fill="#161b22" stroke="#30363d"/>
+  <text x="272" y="154" class="lg">no tests at all · 10</text>
+  <text x="28" y="212" class="lg">10 of 21 projects (48%) with no tests. A 2-state runner would report "green";</text>
+  <text x="28" y="228" class="lg">here they become INDETERMINATE and block auto-merge.</text>
+  <line x1="28" y1="244" x2="672" y2="244" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Panel B: ratchet -->
+  <text x="28" y="268" class="pt">Structural ratchet · 50 invariants</text>
+  <rect x="28" y="280" width="644" height="26" rx="5" fill="#238636"/>
+  <rect x="28" y="280" width="72" height="26" fill="#196c2e"/>
+  <text x="64" y="298" class="num" text-anchor="middle">7</text>
+  <text x="386" y="298" class="num" text-anchor="middle">43</text>
+  <rect x="28" y="320" width="14" height="14" rx="4" fill="#196c2e"/>
+  <text x="48" y="332" class="lg">execute the real artifact (suite, flow or verifier) · 7</text>
+  <rect x="28" y="342" width="14" height="14" rx="4" fill="#238636"/>
+  <text x="48" y="354" class="lg">static / structural check · 43</text>
+  <line x1="28" y1="366" x2="672" y2="366" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Panel C: evaluation coverage -->
+  <text x="28" y="390" class="pt">Evaluation coverage · reported honestly</text>
+  <text x="28" y="410" class="lg">golden cases defined</text>
+  <rect x="28" y="416" width="520" height="20" rx="4" fill="#2ea043"/>
+  <text x="556" y="431" class="numg">37</text>
+  <text x="28" y="458" class="lg">cases actually scored</text>
+  <rect x="28" y="464" width="17" height="20" rx="4" fill="#2ea043"/>
+  <text x="52" y="479" class="numg">17</text>
+  <text x="28" y="508" class="lg">the harness and the &#8805;30 cases exist and are enforced; 17 were scored across 4 agents at the measured commit.</text>
+</svg>
