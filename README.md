@@ -5,7 +5,7 @@
 **Português** · [English](README.en.md)
 
 [![versão](https://img.shields.io/github/v/release/tedfernandes/squad-research?label=vers%C3%A3o&color=1f7a50&style=flat-square)](https://github.com/tedfernandes/squad-research/releases)
-[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.22481935-696d75?style=flat-square)](https://doi.org/10.5281/zenodo.22481935)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23112880-696d75?style=flat-square)](https://doi.org/10.5281/zenodo.23112880)
 [![licença CC BY 4.0](https://img.shields.io/badge/licen%C3%A7a-CC_BY_4.0-696d75?style=flat-square)](https://creativecommons.org/licenses/by/4.0/)
 [![ORCID](https://img.shields.io/badge/ORCID-0009--0006--7522--326X-696d75?style=flat-square&logo=orcid&logoColor=white)](https://orcid.org/0009-0006-7522-326X)
 [![paper online](https://img.shields.io/badge/paper-online-696d75?style=flat-square)](https://tedfernandes.github.io/squad-research/)
@@ -65,7 +65,7 @@ sanitizadas de mecanismo.
 Autor: Ted Fernandes ([ORCID 0009-0006-7522-326X](https://orcid.org/0009-0006-7522-326X)).
 
 Há um `CITATION.cff` (o GitHub mostra o botão "Cite this repository"). DOI (concept, todas as
-versões): [10.5281/zenodo.22481935](https://doi.org/10.5281/zenodo.22481935).
+versões): [10.5281/zenodo.23112880](https://doi.org/10.5281/zenodo.23112880).
 
 ## Licença
 

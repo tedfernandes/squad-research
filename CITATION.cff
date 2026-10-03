@@ -31,5 +31,5 @@ repository-code: "https://github.com/tedfernandes/squad-research"
 url: "https://tedfernandes.github.io/squad-research/"
 identifiers:
   - type: doi
-    value: "10.5281/zenodo.22481935"
+    value: "10.5281/zenodo.23112880"
     description: "Concept DOI (todas as versões; resolve sempre para a mais recente)"
