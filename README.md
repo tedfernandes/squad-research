@@ -60,6 +60,17 @@ Nenhum dado de cliente, detalhe de segurança de produção ou configuração op
 aparece aqui. Todos os números são anonimizados e os trechos de código são ilustrações
 sanitizadas de mecanismo.
 
+## Atualização de 19/10/2026
+
+O paper (v1.0) descreve o sistema no commit medido e **não foi alterado**. Desde então a fonte cresceu; os números abaixo foram conferidos no repositório do plugin, não arredondados:
+
+- **35 agentes em 4 times** (11 de dev, 8 de marketing, 8 comercial e 8 de diretoria), no lugar dos 27 em 3 times do paper. O time comercial é novo.
+- **47 skills** e **54 invariantes** na catraca (o paper mede 40 skills e 50 invariantes).
+- **41 casos-golden definidos em 8 agentes.** Quantos têm nota registrada continua menor que isso; o paper reporta 17 pontuados em 4 agentes no commit medido e esse número não foi atualizado aqui.
+- **Um exemplo do mecanismo 2 em ação.** A skill de prospecção global prometia lista de não contactar, opt-out automático e freio de envio, mas era só texto de prompt. Isso foi tratado como "menção não prova existência": as regras viraram código (`tools/prospeccao/`), e a catraca ganhou a invariante `PROSP1`, que executa a suíte. O mecanismo 4 também apareceu: o primeiro caso de avaliação do agente de prospecção saiu com nota 0,00 (anti-exemplo violado, ele completava a meta com contas de país excluído); depois de um ajuste mínimo no prompt, subiu para 0,80, sem regressão nos outros três casos.
+
+Isso continua sendo o relato de um único operador, sem revisão por pares.
+
 ## Citação
 
 Autor: Ted Fernandes ([ORCID 0009-0006-7522-326X](https://orcid.org/0009-0006-7522-326X)).
