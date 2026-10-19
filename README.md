@@ -68,6 +68,7 @@ O paper (v1.0) descreve o sistema no commit medido e **não foi alterado**. Desd
 - **47 skills** e **54 invariantes** na catraca (o paper mede 40 skills e 50 invariantes).
 - **41 casos-golden definidos em 8 agentes.** Quantos têm nota registrada continua menor que isso; o paper reporta 17 pontuados em 4 agentes no commit medido e esse número não foi atualizado aqui.
 - **Um exemplo do mecanismo 2 em ação.** A skill de prospecção global prometia lista de não contactar, opt-out automático e freio de envio, mas era só texto de prompt. Isso foi tratado como "menção não prova existência": as regras viraram código (`tools/prospeccao/`), e a catraca ganhou a invariante `PROSP1`, que executa a suíte. O mecanismo 4 também apareceu: o primeiro caso de avaliação do agente de prospecção saiu com nota 0,00 (anti-exemplo violado, ele completava a meta com contas de país excluído); depois de um ajuste mínimo no prompt, subiu para 0,80, sem regressão nos outros três casos.
+- **Um exemplo do mesmo princípio no pagamento.** Na mesma skill, o comprovante de Pix que o cliente envia **não confirma** o pagamento: só uma validação humana conta, e fora do Brasil só a leitura do estado no Stripe (`paid`). A chave Pix só é enviada depois de o cliente confirmar por escrito que quer o serviço. É "o não medido não vira passou" aplicado a dinheiro. Isso é regra de prompt e de procedimento, ainda sem teste automatizado de ponta a ponta.
 
 Isso continua sendo o relato de um único operador, sem revisão por pares.
 

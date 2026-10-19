@@ -64,6 +64,7 @@ The paper (v1.0) describes the system at the measured commit and **has not been 
 - **47 skills** and **54 invariants** in the ratchet (the paper measures 40 skills and 50 invariants).
 - **41 golden cases defined across 8 agents.** How many have a recorded score is still lower than that; the paper reports 17 scored across 4 agents at the measured commit and that figure is not updated here.
 - **An example of mechanism 2 at work.** The global-prospecting skill promised a do-not-contact list, automatic opt-out and a send brake, but it was only prompt text. This was treated as "a mention does not prove existence": the rules became code (`tools/prospeccao/`), and the ratchet gained invariant `PROSP1`, which executes the test suite. Mechanism 4 showed up too: the first evaluation case for the prospecting agent scored 0.00 (anti-example violated, it filled the quota with accounts from an excluded country); after a minimal prompt change it rose to 0.80, with no regression on the other three cases.
+- **The same principle applied to payment.** In the same skill, the Pix receipt the client sends **does not confirm** payment: only a human validation counts, and outside Brazil only reading the state in Stripe (`paid`). The Pix key is sent only after the client confirms in writing that they want the service. It is "not measured never becomes passed" applied to money. This is a prompt and procedure rule, still without an end-to-end automated test.
 
 This remains a single-operator report with no peer review.
 
