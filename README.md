@@ -67,6 +67,10 @@ Autor: Ted Fernandes ([ORCID 0009-0006-7522-326X](https://orcid.org/0009-0006-75
 Há um `CITATION.cff` (o GitHub mostra o botão "Cite this repository"). DOI (concept, todas as
 versões): [10.5281/zenodo.23112880](https://doi.org/10.5281/zenodo.23112880).
 
+## Colaborar
+
+Quer contribuir com o framework ou com uma frente da empresa? Veja [COLABORE.md](COLABORE.md) e envie uma solicitação em [Quero colaborar](https://github.com/tedfernandes/squad-research/issues/new?template=colaborar.yml).
+
 ## Licença
 
 - **Prosa** (`paper.md`, `paper.en.md`, este README): [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).

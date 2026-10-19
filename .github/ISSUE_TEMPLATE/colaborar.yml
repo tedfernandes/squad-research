@@ -1,0 +1,56 @@
+name: Quero colaborar
+description: Envie uma solicitação para colaborar com o Squad (projeto original) ou com uma frente da empresa.
+title: "[Colaborar] "
+labels: ["colaborar"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado pelo interesse. Preencha abaixo. Você recebe retorno por aqui ou pelo contato informado. Não inclua dados sigilosos.
+  - type: dropdown
+    id: frente
+    attributes:
+      label: Onde você quer colaborar
+      description: Projetos de cliente são casados em privado conforme sua área.
+      options:
+        - Framework Squad (projeto original, agentes e skills)
+        - Pesquisa (squad-research)
+        - Dev (back-end, front-end, full-stack, QA)
+        - Marketing (copy, tráfego, design, vídeo, social)
+        - Comercial (prospecção, proposta, sucesso do cliente)
+        - Diretoria (produto, operações, financeiro, jurídico)
+        - Design (UX/UI, identidade visual)
+        - Outra (descreva abaixo)
+    validations:
+      required: true
+  - type: input
+    id: contato
+    attributes:
+      label: Nome e contato
+      description: Como falar com você (e-mail, LinkedIn ou GitHub).
+    validations:
+      required: true
+  - type: textarea
+    id: experiencia
+    attributes:
+      label: Experiência e links
+      description: Em poucas linhas, o que você faz e um link de portfólio, GitHub ou trabalho anterior.
+    validations:
+      required: true
+  - type: dropdown
+    id: disponibilidade
+    attributes:
+      label: Disponibilidade
+      options:
+        - Pontual (freela por tarefa)
+        - Parcial (algumas horas por semana)
+        - Dedicada (full-time)
+    validations:
+      required: true
+  - type: checkboxes
+    id: regras
+    attributes:
+      label: Combinado
+      options:
+        - label: Não incluí dados de cliente, chaves ou segredos nesta solicitação.
+          required: true
