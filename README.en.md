@@ -56,6 +56,17 @@ See Sections 5 and 6 of the paper.
 No client data, production-security detail, or verbatim operational configuration appears here.
 All figures are anonymized and all code excerpts are sanitized illustrations of mechanism.
 
+## Update, 19 October 2026
+
+The paper (v1.0) describes the system at the measured commit and **has not been changed**. The source has grown since; the numbers below were checked against the plugin repository, not rounded:
+
+- **35 agents in 4 teams** (11 dev, 8 marketing, 8 commercial and 8 board), instead of the paper's 27 in 3 teams. The commercial team is new.
+- **47 skills** and **54 invariants** in the ratchet (the paper measures 40 skills and 50 invariants).
+- **41 golden cases defined across 8 agents.** How many have a recorded score is still lower than that; the paper reports 17 scored across 4 agents at the measured commit and that figure is not updated here.
+- **An example of mechanism 2 at work.** The global-prospecting skill promised a do-not-contact list, automatic opt-out and a send brake, but it was only prompt text. This was treated as "a mention does not prove existence": the rules became code (`tools/prospeccao/`), and the ratchet gained invariant `PROSP1`, which executes the test suite. Mechanism 4 showed up too: the first evaluation case for the prospecting agent scored 0.00 (anti-example violated, it filled the quota with accounts from an excluded country); after a minimal prompt change it rose to 0.80, with no regression on the other three cases.
+
+This remains a single-operator report with no peer review.
+
 ## Citing
 
 Author: Ted Fernandes ([ORCID 0009-0006-7522-326X](https://orcid.org/0009-0006-7522-326X)).
